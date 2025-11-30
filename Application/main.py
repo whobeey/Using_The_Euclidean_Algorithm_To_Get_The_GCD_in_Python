@@ -13,20 +13,24 @@ def euclidean(dividend, divisor): # Initializing the function which encapsulates
     gcd = dividend # The value of the GCD of the two integers will be the latest value of the dividend. In more detail it is that value of the dividend when the divisor is equal to zero
     return gcd # The function returns the GCD when the divisor is equal to zero, by returning a value of a local variable instead of printing it to the console, this leverages from the use of encapsulation in numerous ways as we can set a new variable to be equal to the return value of the function, in this case it is the GCD of two positive integers 
 
-integer_01 = 67 # Initializing the first positive integer to be used in the function
-integer_02 = 3 # Initializing the second positive integer to be used in the function
-
+while(True):
+    integer_01 = int(input("Enter the first positive integer: ")) # Initializing the first input which should be a positive integer to be used in the function
+    if integer_01 % 1 != 0 or integer_01 < 1: # These lines check the value of the input and prints an error message if it is an invalid value and restarts the loop allowing the user to input a valid value
+        print("Error: The input should be a positive integer") # Prints the error message to the console
+        continue # Continues the while loop, allowing the user to re-enter a valid value
+    integer_02 = int(input("Enter the second positive integer: ")) # Initializing the second input which should be a positive integer to be used in the function
+    if integer_02 % 1 != 0 or integer_02 < 1: # These lines check the value of the input and prints an error message if it is an invalid value and restarts the loop allowing the user to input a valid value
+        print("Error: The input should be a positive integer") # Prints the error message to the console
+        continue # Continues the while loop, allowing the user to re-enter a valid value
+    break # This line will be executed if both values are valid to be used in the euclidean() function, it breaks out of the while loop
+    
 print(f"The GCD of {integer_01} and {integer_02} is equal to the following value: {euclidean(integer_01, integer_02)}") # By utilizing the use of an "f-string" in Python 3, it is possible to print in a convenient manner that represents different values of different variables in a print statement
         
 
 """
 Please note the following statements related to the program:
 
-The purpose of both integers (refer to line 1, 2), was to demonstrate how the euclidean() function can take two positive integers as arguments.
-    
-Alternatively, in this program it is possible to insert positive integers as arguments for the euclidean() function.
-
 Both integers could be initialized before or after the initialization of the euclidean() function, it is crucial to ensure that they are intialized before being used as arguments for the function.
 
-In line 12, it was feasible to substitute the return value with a variable that is equal to the return value.
+In line 12, it was feasible to substitute the return value of the function contained in the "f-string" with a variable that is equal to the return value.
 """
