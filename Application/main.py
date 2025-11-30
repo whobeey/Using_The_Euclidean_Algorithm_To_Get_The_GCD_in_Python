@@ -15,11 +15,11 @@ def euclidean(dividend, divisor): # Initializing the function which encapsulates
 
 while(True):
     integer_01 = int(input("Enter the first positive integer: ")) # Initializing the first input which should be a positive integer to be used in the function
-    if integer_01 % 1 != 0 or integer_01 < 1: # These lines check the value of the input and prints an error message if it is an invalid value and restarts the loop allowing the user to input a valid value
+    if integer_01 < 1: # These lines check the value of the input and prints an error message if it is an invalid value and restarts the loop allowing the user to input a valid value
         print("Error: The input should be a positive integer") # Prints the error message to the console
         continue # Continues the while loop, allowing the user to re-enter a valid value
     integer_02 = int(input("Enter the second positive integer: ")) # Initializing the second input which should be a positive integer to be used in the function
-    if integer_02 % 1 != 0 or integer_02 < 1: # These lines check the value of the input and prints an error message if it is an invalid value and restarts the loop allowing the user to input a valid value
+    if integer_02 < 1: # These lines check the value of the input and prints an error message if it is an invalid value and restarts the loop allowing the user to input a valid value
         print("Error: The input should be a positive integer") # Prints the error message to the console
         continue # Continues the while loop, allowing the user to re-enter a valid value
     break # This line will be executed if both values are valid to be used in the euclidean() function, it breaks out of the while loop
